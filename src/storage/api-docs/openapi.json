@@ -1,0 +1,125 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Notebook API",
+        "description": "Notebook API",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/v1/notebook/": {
+            "get": {
+                "description": "Возвращает перечень записей",
+                "operationId": "81cc975e33dd570ff56ea64ace358229",
+                "responses": {
+                    "200": {
+                        "description": "Перечень записей",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Запись не найдена",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/notebook/{notebook}/": {
+            "get": {
+                "description": "Возвращает запись по идентификатору",
+                "operationId": "4a817b858332c4b791ee87b86880aa82",
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/notebook"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Запись",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Запись не найдена",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "summary": "Create a new record in the database.",
+                "description": "Создаёт запись",
+                "operationId": "5f723d73e8d7e3cd8222a63c86bfd32a",
+                "responses": {
+                    "201": {
+                        "description": "Запись создана",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "description": "Удаляет запись",
+                "operationId": "e9b8618f1c9d1e721955c2a5ba7f30d8",
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/notebook"
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Запись удалена",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    }
+                }
+            },
+            "patch": {
+                "description": "Корректирует запись",
+                "operationId": "f5c8d7659ca74b49c230824d8118db5b",
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/notebook"
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Запись откорректирована",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "parameters": {
+            "notebook": {
+                "name": "notebook",
+                "in": "path",
+                "description": "Первичный ключ"
+            }
+        }
+    }
+}

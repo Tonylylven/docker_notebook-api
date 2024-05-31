@@ -1,0 +1,5 @@
+# Игнорировать файлы Docker
+docker/volume/
+
+# Игнорировать файлы MySQL
+docker/volume/mysql/
