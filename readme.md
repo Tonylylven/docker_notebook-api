@@ -1,4 +1,4 @@
-Для начала нужно будет установить Docker Desktop
+Для начала нужно будет установить Docker Desktop.
 
 Ставим проект и прописываем cd src в командную строку, далее нужно будет запустить команду composer install для установки зависимостей laravel.
 
@@ -12,9 +12,9 @@
 
 Далее меняем в .env параметр DB_HOST на mysql(название контейнера в докере, иначе не будет работать).
 
-Если будет ошибка SQLSTATE[HY000] [2002] No such file or directory, то используем команду php artisan config:clear
+Если будет ошибка SQLSTATE[HY000] [2002] No such file or directory, то используем команду php artisan config:clear.
 
-Для теста API используйте php artisan test, но обязательно меняйте в .env DB_HOST на localhost, для того чтобы laravel смог подключиться к базе данных. 
+Для теста API используйте php artisan test, но обязательно меняйте в .env DB_HOST на localhost, для того чтобы laravel смог подключиться к базе данных. Ошибка в методе store это баг, на самом деле запись добавляется, можете сами проверить).
 
 localhost/api/documentation Swagger-документация всех методов API.
 
