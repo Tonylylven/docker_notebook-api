@@ -10,8 +10,15 @@
 
 Чтобы добавить данные в базу данных воспользуйтесь командой php artisan php artisan db:seed --class=NotebookSeeder.
 
-Далее меняем в .env параметр DB_HOST на localhost.
+Далее меняем в .env параметр DB_HOST на mysql(название контейнера в докере, иначе не будет работать).
 
 Если будет ошибка SQLSTATE[HY000] [2002] No such file or directory, то используем команду php artisan config:clear
 
-Для теста API используйте php artisan test.
+Для теста API используйте php artisan test, но обязательно меняйте в .env DB_HOST на localhost, для того чтобы laravel смог подключиться к базе данных. 
+
+localhost/api/documentation Swagger-документация всех методов API.
+
+localhost/api/v1/notebook Вывод всех записей Notebook.
+
+localhost/api/v1/notebook/{notebook} Вывод одной записи Notebook.
+

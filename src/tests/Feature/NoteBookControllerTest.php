@@ -53,7 +53,7 @@ class NoteBookControllerTest extends TestCase
      */
     public function testUpdate(): void
     {
-        $response = $this->patch('/api/v1/notebook/1', [
+        $response = $this->patch('/api/v1/notebook/3', [
             'fio' => 'Ионин Роман Викторович',
             'phone' => '+79999999999',
             'email' => 'jXUyB@example.com',
